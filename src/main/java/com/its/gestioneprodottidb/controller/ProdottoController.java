@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/prodotti")
@@ -20,7 +21,7 @@ public class ProdottoController {
     }
 
     @GetMapping("/get-prodotto/{id}")
-    public Prodotto getId(@PathVariable Long id){
+    public Optional getId(@PathVariable Long id){
        return prodottoService.getId(id);
     }
 
